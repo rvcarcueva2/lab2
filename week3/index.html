@@ -9,7 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+
     <style>
+    
+    
+  html {
+  scroll-behavior: smooth;
+}
 
    *{
     padding: 0;
@@ -42,12 +49,44 @@
     text-transform: uppercase;
    }
 
-    
+   #section1 {
+  height: 750px;
+  
+   }
 
+   #section2 {
+  height: 650px
+  
+  
+  }
+
+  #press{
+    animation:blink 1s infinite;
+    font-family: 'Press Start 2P';font-size: 22px;
+    margin-top: 250px;
+    
+    
+  }
+  @keyframes blink{
+    0%{
+      opacity: 1;
+    }
+    100%{
+      color: blue;
+      opacity: 0;
+    }
+  }
+  a:visited {
+  color: white;
+  background-color: transparent;
+  }
+
+ 
      body{
+    
       background-image: url(https://media.tenor.com/kWO_LbBMUTgAAAAC/retrodrive-retro.gif);
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size:cover;
       color: white;
       background-color: #15161B;
       padding: 10px;
@@ -55,7 +94,7 @@
       
      }
 
-    section {
+    section{
 
             max-width: 800px;
             margin: 20px;
@@ -96,6 +135,8 @@
     </style>
 </head>
     <body>
+
+      <div class="main" id="section1">
       <nav>
       
         <label class="logo">MY_BIO <sup>&#169</sup></label>
@@ -105,8 +146,17 @@
           <li><a href="#">Contacts</a></li>
         </ul>
       </nav>
-      <img src="img/picture2.png" id="img" width="400px">
+      <div style="text-align: center;">
+      <h1 id="press"><a href="#section2">Press Start</a></h1>
+      </div>
+      </a>
       
+    
+      </div>
+
+
+      <div id="section2">
+        <img src="img/picture2.png" id="img" width="400px">
       
       <section>
       <h2 style="color: #fccb06;">Welcome to my World &#127765;</h2>
@@ -116,6 +166,8 @@
       <p>I like to do alot of things especially the ones that benefits my wellbeing such as Sports, Gaming and Music.</p>
       <p>I also can work with groups, and I comply on time.</p>
     </section>
+      </div>
+
   
 
      
