@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 
     <style>
     
@@ -52,18 +54,31 @@
    #section1 {
   height: 750px;
   
+  
+  
    }
 
    #section2 {
-  height: 650px
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bc47194c-4389-40b2-b130-e3de76db4ea0/dg2mw3n-378e0ef7-199f-4022-9f7b-ff2440ba69c2.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JjNDcxOTRjLTQzODktNDBiMi1iMTMwLWUzZGU3NmRiNGVhMFwvZGcybXczbi0zNzhlMGVmNy0xOTlmLTQwMjItOWY3Yi1mZjI0NDBiYTY5YzIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.11U3lSuQa5rTeFTxcLN5OZ9cvqJ1fMnX01PxrOQWuJs);
+      background-repeat: no-repeat;
+      background-size:cover;
+      height: 750px;
+      margin-top: 10px;
+      padding:10px;
+     
+     
+
   
   
   }
 
-  #press{
+  pre{
+    
     animation:blink 1s infinite;
     font-family: 'Press Start 2P';font-size: 22px;
     margin-top: 250px;
+    margin-right: 130px;
+    
     
     
   }
@@ -81,12 +96,21 @@
   background-color: transparent;
   }
 
- 
-     body{
-    
-      background-image: url(https://media.tenor.com/kWO_LbBMUTgAAAAC/retrodrive-retro.gif);
+  #header{
+    background-image: url(https://media.tenor.com/kWO_LbBMUTgAAAAC/retrodrive-retro.gif);
       background-repeat: no-repeat;
       background-size:cover;
+      height: 728px;
+      padding:0%;
+      transition: background-image 1s ease-in-out;
+      
+      
+  }
+ 
+     body{
+      
+    
+       
       color: white;
       background-color: #15161B;
       padding: 10px;
@@ -95,16 +119,19 @@
      }
 
     section{
-
-            max-width: 800px;
-            margin: 20px;
-            margin-top: 355px;
-            padding: 20px;
+      
+      
+    position:relative;
+            max-width: 900px;
+            margin-top: 50px;
+            margin-right: 230px;
             line-height: 40px;
+            padding: 10px;
             box-shadow: 0 0 10px rgb(179, 3, 149);
             border: 2px solid #3498db;
-            background-color: rgba(113, 2, 2, 0.408);
+            background-color: rgba(72, 3, 3, 0.9);
             float: right
+            
      }
     
     
@@ -120,12 +147,12 @@
     }
 
     #img{
-      box-shadow: 0 0 10px rgb(179, 3, 149);
-      border: 2px solid #3498db;
-      background-color: rgba(113, 2, 2, 0.408);
-      margin-top: 40px;
-      padding: 0px;
-      float:left
+      position:relative;
+      
+      left: 640px;
+      top:400px;
+      
+      
       
     }
   
@@ -135,8 +162,11 @@
     </style>
 </head>
     <body>
+     
+      
 
       <div class="main" id="section1">
+        <div id="header">
       <nav>
       
         <label class="logo">MY_BIO <sup>&#169</sup></label>
@@ -147,18 +177,22 @@
         </ul>
       </nav>
       <div style="text-align: center;">
-      <h1 id="press"><a href="#section2">Press Start</a></h1>
-      </div>
-      </a>
+    <pre>
+      <a href="#" id="link" onclick="change()">Press Start</a>
+    </pre>
       
-    
       </div>
+    </div>
+    
+      
+      
 
 
       <div id="section2">
-        <img src="img/picture2.png" id="img" width="400px">
+        <img src="img/picture2.png" id="img" width="170px">
       
       <section>
+        
       <h2 style="color: #fccb06;">Welcome to my World &#127765;</h2>
       <h1>Hi I'm Reycel Carcueva</h1>
       
@@ -167,6 +201,19 @@
       <p>I also can work with groups, and I comply on time.</p>
     </section>
       </div>
+
+      <script>
+        var backgroundContainer = document.getElementById("header");
+        var changeBackgroundLink = document.getElementById("link");
+        function change()
+        {
+          document.getElementById("header").style.backgroundImage="url('https://i.redd.it/h98ct9hz24k41.gif')"
+          changeBackgroundLink.style.display = "none";
+        }
+      
+      </script>
+
+    
 
   
 
