@@ -100,9 +100,9 @@
     background-image: url(https://media.tenor.com/kWO_LbBMUTgAAAAC/retrodrive-retro.gif);
       background-repeat: no-repeat;
       background-size:cover;
-      height: 728px;
+      height: 750px;
       padding:0%;
-      transition: background-image 1s ease-in-out;
+      transition: background-image 0.5s ease-in-out;
       
       
   }
@@ -118,19 +118,15 @@
       
      }
 
-    section{
-      
-      
-    position:relative;
-            max-width: 900px;
-            margin-top: 50px;
-            margin-right: 230px;
+     #overlayContent1 {
+            background-color: #212121;
+            padding: 20px;
             line-height: 40px;
-            padding: 10px;
+            border-radius: 5px;
             box-shadow: 0 0 10px rgb(179, 3, 149);
             border: 2px solid #3498db;
-            background-color: rgba(72, 3, 3, 0.9);
-            float: right
+
+            
             
      }
     
@@ -146,35 +142,80 @@
       font-weight: bold;
     }
 
-    #img{
-      position:relative;
-      background-color: #15161B;
-      box-shadow: 0 0 10px rgb(179, 3, 149);
-      border: 2px solid #3498db;
-      background-color: rgb(62, 1, 1);
-      left: 880px;
-      top:150px;
+    #imageContainer{
+      margin-left: 350px;
+      margin-bottom: 10px;
+      max-width: 100%;
+      
+      
+    
       
       
       
     }
+    
+.button {
+    display: none;
+   position: absolute;
+   top: 300px;
+   left: 200px;
+    padding: 8px 16px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    box-shadow:#15161B;
+    border-radius: 5px;
+    font-family: 'Press Start 2P'
+    
+     
+}
+button {
+            margin-left: 800px;
+            padding: 10px 15px;
+            font-size: 20px;
+            background-color: #3498db;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Press Start 2P'
+            
+        }
+
+
+
+    
+    
+            
+        
+
+#overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+}
   
+
 
      
 
     </style>
 </head>
     <body>
-     
-      
-
+    
       <div class="main" id="section1">
         <div id="header">
       <nav>
       
         <label class="logo">MY_BIO <sup>&#169</sup></label>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#" id="openOverlayLink" onclick="openOverlay()">Profile</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contacts</a></li>
         </ul>
@@ -183,36 +224,92 @@
     <pre>
       <a href="#" id="link" onclick="change()">Press Start</a>
     </pre>
-      
+    <pre>
+    <button class="button" id="myButton" onclick="buttonclicked()">LAUNCH</button>
+    </pre>
+
       </div>
     </div>
     
       
       
+   
 
-
-      <div id="section2">
-        <img src="img/picture2.png" id="img" width="180px" height="220px">
-      
-      <section>
-        
-      <h2 style="color: #fccb06;">Welcome to my World &#127765;</h2>
-      <h1>Hi I'm Reycel Carcueva</h1>
-      
-      <p>19 years of age and currently taking BSIT as my 4-year course here at Asia Pacific College</p>
-      <p>I like to do alot of things especially the ones that benefits my wellbeing such as Sports, Gaming and Music.</p>
-      <p>I also can work with groups, and I comply on time.</p>
-    </section>
+    <div id="overlay">
+      <div id="overlayContent1">
+          <button class="closeButton"id="closeOverlayButton" >X</button>
+          <div id="imageContainer">
+            <img src="img/picture2.png" width="200px" alt="Overlay Image">
+        </div>
+          <h2 style="color: #fccb06;">Welcome to my World &#127765;</h2>
+           <h1>Hi I'm Reycel Carcueva</h1>
+           <p>19 years of age and currently taking BSIT as my 4-year course here at Asia Pacific College</p>
+           <p>I like to do alot of things especially the ones that benefits my wellbeing such as Sports, Gaming and Music.</p>
+           <p>I also can work with groups, and I comply on time.</p>
+          
       </div>
+  </div>
+      
+      
 
       <script>
         var backgroundContainer = document.getElementById("header");
         var changeBackgroundLink = document.getElementById("link");
+        var myImage = document.getElementById("header");
+        var showButtonLink = document.getElementById("link");
+        var myButton = document.getElementById("myButton");
+        
+
         function change()
+  
         {
-          document.getElementById("header").style.backgroundImage="url('https://i.redd.it/h98ct9hz24k41.gif')"
+          myImage.style.backgroundImage="url('https://i.redd.it/h98ct9hz24k41.gif')"
           changeBackgroundLink.style.display = "none";
         }
+        document.addEventListener("DOMContentLoaded", function() {
+          showButtonLink.addEventListener("click", function(event) {
+          event.preventDefault(); 
+          myButton.style.display = "block";
+         
+    });
+  });
+    function buttonclicked()
+  
+        {
+          myImage.style.backgroundImage="url('https://i.pinimg.com/originals/5d/c3/50/5dc350fb8ef7a2c3dbdb1e3d4bc44083.gif')"
+          myButton.style.display = "none";
+          welcomeText.style.display = "block";
+
+        }
+        function openOverlay() {
+            var overlay = document.getElementById("overlay");
+            overlay.style.display = "flex";
+        }
+
+       
+        function closeOverlay() {
+            var overlay = document.getElementById("overlay");
+            overlay.style.display = "none";
+        }
+
+        
+        document.getElementById("openOverlayLink").addEventListener("click", openOverlay);
+
+        
+        document.getElementById("closeOverlayButton").addEventListener("click", closeOverlay);
+       
+         
+
+    
+    
+             
+
+
+
+ 
+
+
+
       
       </script>
 
