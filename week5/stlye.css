@@ -4,20 +4,23 @@
     box-sizing: border-box;
 
 }
+:root {
+  background: #111111;
+}
+
 body{
-    display: inline-block;
+    display: block;
+    margin: 20px;
     font-family: Open Sans,sans-serif;
     font-size: 20px;
-    background-image: url('background1.png');
+    background-image: 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     
    
 }
-@media screen and (max-width: 600px) {
-    
-  }
+
 p{
     color: white;
     margin: 10px 0 23px;
@@ -32,6 +35,7 @@ h1{
     font-family: Poppins,sans-serif;
     text-transform: uppercase!important;
     font-weight: 800;
+    line-height: 60px;
 }
 
 h2{
@@ -39,6 +43,7 @@ h2{
     color: white;
     text-transform: uppercase!important;
     font-weight: 800;
+    
     
 }
 
@@ -75,14 +80,50 @@ div{
 }
 
 .container {
-    
     display: inline-block;
     vertical-align: center ; 
-    margin-left: 100px;
+    margin-left: 30px;
     margin-top: 150px;
     
   }
+  .container1 {
+    width: 100%;
+    height: 60vh;
+    display: inline-block;
+    vertical-align: center ; 
+    margin-left: 50px;
+    margin-top: 30px;
+    
+    
+  }
+  .slide1{
+    width:100%;
+    
+   display: block;
+   
+   
+  }
+  .slide2{
+    width:100%;
+    height: 90vh;
+   display: block;
+   padding-left: 10px;
+   
+   
+  }
 
+  .info{
+    display:block;
+    margin-top: 40px;
+    width: 40%;
+   
+    padding: 20px;
+   
+  }
+  .hobbies{
+    
+  }
+  
   position{
     position: absolute;
     top: 85%;
@@ -91,6 +132,10 @@ div{
   }
   
   .btn{
+    display: flex;
+    position: absolute;
+    left: -100px;
+    bottom: -30px;
     font-size: large;
     font-weight: bold;
     border-radius: 10px;
@@ -104,6 +149,7 @@ div{
     margin: 10px;
     cursor: pointer;
     transition: 0.5s;
+    
 
   }
   .btn:hover{
@@ -112,11 +158,11 @@ div{
   }
 
   .sidebar{
-    position: absolute;
+    position: fixed;
     top: 200px;
     right: 10px;
     width: 89px;
-    height: 40vh;
+    height: 400px;
     background:none;
     transition: 0.5s;
     overflow: hidden;
@@ -124,13 +170,14 @@ div{
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    
 
   }
 
   .sidebar ul{
     position:relative;
+  
    
-
     
 
   }
@@ -138,6 +185,7 @@ div{
   .sidebar ul li{
     position:relative;
     list-style: none;
+    padding-top: ;
   }
 
   .sidebar ul li.active{
@@ -246,4 +294,6 @@ div{
     
 
 }
+
+
 
