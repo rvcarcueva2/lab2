@@ -334,8 +334,10 @@ transform: translate(-5px, -10px);
 #video-container {
   position: relative;
   margin-left: 30px;
-  width: 95%;
+  width: 94%;
   height: 85vh;
+  border: solid 3px #C40BD5;
+  border-radius: 1%;
   
   
 }
