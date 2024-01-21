@@ -130,7 +130,7 @@
   
 </div>
 
-<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 200vh; padding: 20px">
+<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 220vh; padding: 20px">
   <h1>Javascript lessons </h1>
   <h2 style="display: inline-block; padding-left: 10px;">Objects</h2>
   <img src="https://cdn.carbuzz.com/gallery-images/1600/1147000/100/1147124.jpg" width="300px" style="border: solid 2px #C40BD5;  border-radius: 1%;">
@@ -178,12 +178,12 @@ myCar1.name + myCar1.year + " " + "and" + myCar2.name + myCar2.year + "."
 </script>
 
 <h2 style="display: inline-block; padding-left: 10px; margin-top: 20px;">Async</h2>
-<p>Wait 2 seconds (2000 milliseconds) for this page to change.</p>
+<p>Wait 1 seconds (1000 milliseconds) for this page to change.</p>
 
-<h2 style="display: inline-block; color: red;" id="demo4"></h2>
+<h2 style="display: inline-flex; color: red;" id="demo4"></h2>
 
 <script>
-setInterval(myFunction, 2000);
+setInterval(myFunction, 1000);
 
 function myFunction() {
   document.getElementById("demo4").innerHTML = "I love You !!";
@@ -195,6 +195,59 @@ function myFunction() {
   
   }
 
+</script>
+
+<h2 style="display: flex; padding-left: 10px; margin-top: 30px">HTML DOM</h2>
+<style>
+  #container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid gray;
+    overflow: hidden;
+  }
+  #animate {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #C40BD5;
+  }
+</style>
+</head>
+<body>
+
+<p><button onclick="myMove()">Click Me</button></p>
+
+<div id="container">
+<div id="animate"></div>
+</div>
+
+<script>
+function myMove() {
+const elem = document.getElementById("animate");
+let posTop = 0;
+let posLeft = 0;
+let directionTop = 1; // 1 or -1 (down or up)
+let directionLeft = 1; // 1 or -1 (right or left)
+
+function frame() {
+  if (posTop + directionTop > 150 || posTop + directionTop < 0) {
+    directionTop *= -1; // Change direction when reaching top or bottom
+  }
+  if (posLeft + directionLeft > 150 || posLeft + directionLeft < 0) {
+    directionLeft *= -1; // Change direction when reaching left or right
+  }
+  
+
+  posTop += directionTop;
+  posLeft += directionLeft;
+
+  elem.style.top = posTop + "px";
+  elem.style.left = posLeft + "px";
+}
+
+setInterval(frame, 5);
+}
 </script>
 </div>
 
