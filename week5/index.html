@@ -131,8 +131,9 @@
 </div>
 
 <div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 220vh; padding: 20px">
+  <div style="padding: 10px;">
   <h1>Javascript lessons </h1>
-  <h2 style="display: inline-block; padding-left: 10px;">Objects</h2>
+  <h2 style="margin-top: 30px;">Objects</h2>
   <img src="https://cdn.carbuzz.com/gallery-images/1600/1147000/100/1147124.jpg" width="300px" style="border: solid 2px #C40BD5;  border-radius: 1%;">
   <p id="demo1"></p>
 
@@ -140,8 +141,10 @@
 const car = {type:"Nissan", model:" GT-R R34", color:" blue"};
 document.getElementById("demo1").innerHTML = "The car type is " + car.type + " the model is " + car.model + " and the color is" +car.color + ".";
 </script>
+  </div>
 
-<h2 style="display: inline-block; padding-left: 10px; margin-top: 20px;">Functions</h2>
+<div style="background: gray; padding: 10px;">
+<h2 style= "padding-left: 10px; color: #111;">Functions</h2>
 <p>Multiplay the given numbers to each other (4, 3)</p>
 
 <p style="color: greenyellow; font-weight: 700;" id="demo2"></p>
@@ -154,8 +157,10 @@ document.getElementById("demo1").innerHTML = "The car type is " + car.type + " t
     return a * b ;
   }
   </script>
+  </div>
 
-<h2 style="display: inline-block; padding-left: 10px; margin-top: 20px;">Classes</h2>
+<div>
+<h2 style="margin-top: 20px; padding: 10px;">Classes</h2>
 
 <p>Creating two car objects from a car class:</p>
 
@@ -176,8 +181,10 @@ document.getElementById("demo3").innerHTML =
 myCar1.name + myCar1.year + " " + "and" + myCar2.name + myCar2.year + "."
 
 </script>
+</div>
 
-<h2 style="display: inline-block; padding-left: 10px; margin-top: 20px;">Async</h2>
+<div style="background: gray; padding: 10px;">
+<h2 style="margin-top: 10px; color: #111;">Async</h2>
 <p>Wait 1 seconds (1000 milliseconds) for this page to change.</p>
 
 <h2 style="display: inline-flex; color: red;" id="demo4"></h2>
@@ -196,8 +203,10 @@ function myFunction() {
   }
 
 </script>
+</div>
 
-<h2 style="display: flex; padding-left: 10px; margin-top: 30px">HTML DOM</h2>
+
+<h2 style="margin-top: 20px">HTML DOM</h2>
 <style>
   #container {
     position: relative;
@@ -250,6 +259,8 @@ setInterval(frame, 5);
 }
 </script>
 </div>
+
+
 
 
 
