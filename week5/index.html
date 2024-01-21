@@ -33,6 +33,12 @@
               <div class="text">Contacts</div>
           </a>
       </li>
+      <li style="--bg: #C40BD5;" class="active">
+        <a href="#section4">
+            <div class="icon"><ion-icon name="code-outline"></ion-icon> </div>
+            <div class="text">Contacts</div>
+        </a>
+    </li>
       
   </div>
   
@@ -68,10 +74,9 @@
 
 <div id="section2" class="container-fluid" style="height: 100vh; padding: 20px;">
     <h1>Personal Infos</h1>
-  <pre style="position: absolute;">
+  <pre style="position: absolute; line-height: 0; overflow: hidden; margin: 60px;">
       
-       
-       <p style="color: rgb(167, 165, 165)">First Name: <span style="color: white;"><strong> Reycel John Emmanuel</strong></span></p>
+       <p style="color: rgb(167, 165, 165);">First Name: <span style="color: white;"><strong> Reycel John Emmanuel</strong></span></p>
        <p style="color: rgb(167, 165, 165)">Last Name: <span style="color: white;"><strong> Carcueva</strong></span></p>
        <p style="color: rgb(167, 165, 165);">Freelance: <span style="color: greenyellow;"><strong> Available</strong></span></p>
        <p style="color: rgb(167, 165, 165)">Location: <span style="color: white;"><strong>Taguig, Metro Manila</strong></span></p>
@@ -124,6 +129,22 @@
     </div>
   
 </div>
+
+<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 90vh; padding: 20px">
+  <h1>Javascript lessons </h1>
+  <h2 style="display: inline-block; padding-left: 10px;">Objects</h2>
+  <img src="https://cdn.carbuzz.com/gallery-images/1600/1147000/100/1147124.jpg" width="300px" style="border: solid 2px #C40BD5;  border-radius: 1%;">
+  <p id="demo"></p>
+
+<script>
+const car = {type:"Nissan", model:" GT-R R34", color:" blue"};
+document.getElementById("demo").innerHTML = "The car type is " + car.type + " the model is " + car.model + " and the color is" +car.color + ".";
+</script>
+</div>
+
+
+
+
 
 <script>
    
