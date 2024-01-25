@@ -50,7 +50,7 @@
   </div>
   
   </div>
-  
+<!-- Home Page -->
 <div id="section1" class="container-fluid bg-dark " style="height: 100vh; padding: 20px">
     <img src="logo.png" alt="Logo" width="80px" >
     <img id="picture" src="picture1.png" alt="Profile" width="300px">
@@ -72,6 +72,8 @@
   
 </div>
 
+
+<!-- Personal Infos -->
 <div id="section2" class="container-fluid" style="height: 100vh; padding: 20px;">
     <h1>Personal Infos</h1>
   <pre style="position: absolute; line-height: 0; overflow: hidden; margin: 60px;">
@@ -105,7 +107,7 @@
   </div>    
 
   
-
+<!-- Social Links -->
   <div id="section3" class="container-fluid" style="height: 70vh; padding: 20px">
     <h1>Follow me </h1>
     <div class="mycontainer">
@@ -130,18 +132,20 @@
   
 </div>
 
-<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 220vh; padding: 20px">
-  <div style="padding: 10px;">
-  <h1>Javascript lessons </h1>
-  <h2 style="margin-top: 30px;">Objects</h2>
-  <img src="https://cdn.carbuzz.com/gallery-images/1600/1147000/100/1147124.jpg" width="300px" style="border: solid 2px #C40BD5;  border-radius: 1%;">
-  <p id="demo1"></p>
 
-<script>
-const car = {type:"Nissan", model:" GT-R R34", color:" blue"};
-document.getElementById("demo1").innerHTML = "The car type is " + car.type + " the model is " + car.model + " and the color is" +car.color + ".";
-</script>
+
+<!-- Dev Page -->
+<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 220vh; padding: 20px">
+  <div style= "background: gray;padding: 10px;">
+  <h1>PHP Lessons</h1>
+  <h2 style="margin-top: 30px;">Variables</h2>
+  <?php
+  $txt = "W3Schools.com";
+  echo "I love $txt!";
+  ?>
   </div>
+
+
 
 <div style="background: gray; padding: 10px;">
 <h2 style= "padding-left: 10px; color: #111;">Functions</h2>
