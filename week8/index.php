@@ -135,9 +135,9 @@
 
 
 <!-- Dev Page -->
-<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 220vh; padding: 20px">
+<div id="section4" class="container-fluid" style=" margin-top: 200px;   height: 220vh; padding: 20px;">
+<h1>PHP Lessons</h1>
   <div style= "background: gray;padding: 10px;">
-  <h1>PHP Lessons</h1>
   <h2 style="margin-top: 30px;">Variables</h2>
   <?php
   $txt = "W3Schools.com";
@@ -186,26 +186,29 @@ var_dump($x);
 
 
 <div style="background: gray; padding: 10px;">
-<h2 style="margin-top: 10px; color: #111;">Async</h2>
-<p>Wait 1 seconds (1000 milliseconds) for this page to change.</p>
+<h2 style="margin-top: 10px; color: #111;">Operators & Math</h2>
 
-<h2 style="display: inline-flex; color: red;" id="demo4"></h2>
+<?php
+echo "<h3>Pi<br></h3>";
+echo(pi());
+echo "<br>";
 
-<script>
-setInterval(myFunction, 1000);
+echo "<h3>min & max<br></h3>";
+echo "(0, 150, 30, 20, -8, -200)<br>";
+echo(min(0, 150, 30, 20, -8, -200) . "<br>");
+echo(max(0, 150, 30, 20, -8, -200));
 
-function myFunction() {
-  document.getElementById("demo4").innerHTML = "I love You !!";
-  if (demo4.style.visibility === 'hidden'){
-    demo4.style.visibility = 'visible';
-    } else {
-      demo4.style.visibility = 'hidden';
-    }
-  
-  }
+echo "<h3>sqrt<br></h3>";
+echo "The square root of 64 is ";
+echo (sqrt(64) . "<br>");
 
-</script>
-</div>
+echo "The square root of 16 is ";
+echo(sqrt(16) . "<br>");
+
+
+
+?>
+
 
 
 <h2 style="margin-top: 20px">HTML DOM</h2>
