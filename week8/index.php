@@ -148,19 +148,15 @@
 
 
 <div style="background: gray; padding: 10px;">
-<h2 style= "padding-left: 10px; color: #111;">Functions</h2>
-<p>Multiplay the given numbers to each other (4, 3)</p>
-
-<p style="color: greenyellow; font-weight: 700;" id="demo2"></p>
-
-<script>
-  let x = myFunction(4, 3);
-  document.getElementById("demo2").innerHTML = "Result = " + x;
-  
-  function myFunction(a, b) {
-    return a * b ;
-  }
-  </script>
+<h2 style= "padding-left: 10px; color: #111;">Echo/Print</h2>
+<?php
+echo "PHP is Fun!<br>";
+echo "Hello world!<br>";
+echo "I'm about to learn PHP!<br>";
+echo "This ", "string ", "was ", "made ", "with multiple parameters.<br>";
+print "Hi, I'm using PHP scripting language<br>";
+print "This statement was executed using print";
+?> 
   </div>
 
 <div>
