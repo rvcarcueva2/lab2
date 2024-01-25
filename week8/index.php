@@ -157,31 +157,33 @@ echo "This ", "string ", "was ", "made ", "with multiple parameters.<br>";
 print "Hi, I'm using PHP scripting language<br>";
 print "This statement was executed using print";
 ?> 
-  </div>
+
 
 <div>
-<h2 style="margin-top: 20px; padding: 10px;">Classes</h2>
+<h2 style="background: gray; margin-top: 20px; padding: 10px;">Data Types</h2>
 
-<p>Creating two car objects from a car class:</p>
+<?php 
+echo "<h3>Strings<br></h3>";
+$x = "Hello world!";
+$y = 'Hello world!';
 
-<p id="demo3"></p>
+var_dump($x);
+echo "<br>"; 
+var_dump($y);
+echo "<br>";
 
-<script>
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
-  }
-}
+echo "<h3>Integer<br></h3>";
+$x = 5985;
+var_dump($x);
+echo "<br>";
 
-const myCar1 = new Car("Ford ", 2014);
-const myCar2 = new Car(" Audi ", 2019);
+echo "<h3>Float<br></h3>";
+$x = 10.365;
+var_dump($x);
+?>
 
-document.getElementById("demo3").innerHTML =
-myCar1.name + myCar1.year + " " + "and" + myCar2.name + myCar2.year + "."
 
-</script>
-</div>
+
 
 <div style="background: gray; padding: 10px;">
 <h2 style="margin-top: 10px; color: #111;">Async</h2>
