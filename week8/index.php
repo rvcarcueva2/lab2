@@ -204,65 +204,21 @@ echo (sqrt(64) . "<br>");
 
 echo "The square root of 16 is ";
 echo(sqrt(16) . "<br>");
-
-
-
 ?>
 
 
+<div style="background: gray; padding: 10px;">
+<h2 style="margin-top: 20px">Loops</h2>
+<?php  
 
-<h2 style="margin-top: 20px">HTML DOM</h2>
-<style>
-  #container {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border: 2px solid gray;
-    overflow: hidden;
-  }
-  #animate {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #C40BD5;
-  }
-</style>
-</head>
-<body>
+echo "<h3>Count from 1 to 10 <br></h3>";
+$i = 1;
 
-<p><button onclick="myMove()">Click Me</button></p>
-
-<div id="container">
-<div id="animate"></div>
-</div>
-
-<script>
-function myMove() {
-const elem = document.getElementById("animate");
-let posTop = 0;
-let posLeft = 0;
-let directionTop = 1; // 1 or -1 (down or up)
-let directionLeft = 1; // 1 or -1 (right or left)
-
-function frame() {
-  if (posTop + directionTop > 150 || posTop + directionTop < 0) {
-    directionTop *= -1; // Change direction when reaching top or bottom
-  }
-  if (posLeft + directionLeft > 150 || posLeft + directionLeft < 0) {
-    directionLeft *= -1; // Change direction when reaching left or right
-  }
-  
-
-  posTop += directionTop;
-  posLeft += directionLeft;
-
-  elem.style.top = posTop + "px";
-  elem.style.left = posLeft + "px";
-}
-
-setInterval(frame, 5);
-}
-</script>
+while ($i < 11) {
+  echo $i;
+  $i++;
+} 
+?>  
 </div>
 
 
