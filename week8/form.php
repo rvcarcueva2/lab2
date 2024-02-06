@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>  
+<html>
 <head>
-  <title>Cel - UI / Ux Desinger</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="main.css">
+<style>
+.error {color: #FF0000;}
+</style>
 </head>
+<body>  
 
-
-
-<div style="background: gray; padding: 10px;">
-<h2 style="margin-top: 10px; color: #111;">PHP Form</h2>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -71,7 +64,7 @@ function test_input($data) {
 }
 ?>
 
-<h3>PHP Form Validation Example</h3>
+<h2>PHP Form Validation Example</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -86,17 +79,16 @@ function test_input($data) {
   Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
   <br><br>
   Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="Female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="Male">Male
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
-  <br><br>
 </form>
 
 <?php
-echo "<h3>Your Input:</h3>";
+echo "<h2>Your Input:</h2>";
 echo $name;
 echo "<br>";
 echo $email;
@@ -108,20 +100,12 @@ echo "<br>";
 echo $gender;
 ?>
 
-
 <?php
-// $servername = "localhost";
-// $username = "root";
-// $password = "";
-// $dbname = "myDB";
-
-// for socitcloud
 $servername = "localhost";
 $username = "webprogmi222_sf221";
 $password = "xE*Y2nleNVvZm[!!";
 $dbname = "webprogmi222_sf221";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -140,21 +124,13 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 ?>
 
-</div>
+</body>
+</html>
 
 
 
 
 
-
-<script>
-   
-  function scrollToSection(sectionId) {
-      var section = document.getElementById(sectionId);
-      if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-      }
-  }
 
 
 
