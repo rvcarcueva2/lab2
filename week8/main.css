@@ -29,7 +29,11 @@ h2{
 }
 
 p{
+<<<<<<< HEAD
     
+=======
+    display: inline;
+>>>>>>> 96cd1e94e5a3f97642be4b9f1509ae936e9bebe4
     color: white;
     text-align: left;
     font-size: 22px;
@@ -353,3 +357,7 @@ transform: translate(-5px, -10px);
   z-index: -1;
 }
 
+<<<<<<< HEAD
+=======
+.error {color: #c30101;}
+>>>>>>> 96cd1e94e5a3f97642be4b9f1509ae936e9bebe4
