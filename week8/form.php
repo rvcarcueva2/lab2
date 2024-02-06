@@ -128,7 +128,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO MyGuests (firstname, email, website, comment, gender)
+$sql = "INSERT INTO rvcarcueva2_myguests (firstname, email, website, comment, gender)
 VALUES ('$name', '$email','$website', '$comment', '$gender')";
 
 if ($conn->query($sql) === TRUE) {
@@ -157,32 +157,10 @@ $conn->close();
   }
 
 
-  document.querySelector('a[href="#section1"]').addEventListener('click', function() {
-      scrollToSection('section1');
-  });
-
-  document.querySelector('a[href="#section2"]').addEventListener('click', function() {
-      scrollToSection('section2');
-  });
-  document.querySelector('a[href="#section3"]').addEventListener('click', function() {
-      scrollToSection('section3');
-  });
-
-  function openLink1() {
-    window.open('https://www.facebook.com/reyceel16/', '_blank');
-  }
-  function openLink2() {
-    window.open('https://www.instagram.com/reyceelll/', '_blank');
-  }
-  function openLink3() {
-    window.open('https://github.com/rvcarcueva2/', '_blank');
-  }
 
 
   
-</script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 </html>
